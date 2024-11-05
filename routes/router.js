@@ -50,7 +50,7 @@ router.post('/forgot-password/:id', async (req, res) => {
     try {
         const oldUser = await userSchema.findOne({ email: req.body.email })
         if (oldUser) {
-            const passwordLink = `http://localhost:3000/reset-password/${oldUser._id}`
+            const passwordLink = `https://glowing-daifuku-e624da.netlify.app/reset-password/${oldUser._id}`
 
             var transporter = nodemailer.createTransport({
                 service: 'gmail',
