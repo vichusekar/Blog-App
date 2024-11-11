@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const dotenv = require('dotenv').config()
+const dotenv = require('dotenv')
+dotenv.config()
 
 const mongoose = require('mongoose')
 
@@ -18,8 +19,8 @@ app.get('/', (req, res) => {
 })
 
 mongoose.connect(dbURL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
 })
 
 const PORT = process.env.PORT
